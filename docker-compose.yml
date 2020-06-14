@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mysql:
+    image: "mysql:5.6"
+    environment: 
+      - MYSQL_ROOT_PASSWORD=smartwatch
+    restart: always
+  flask:
+    build: .
+    ports:
+     - "5000:5000"
+    volumes: 
+      - .:/code
+    environment: 
+      FLASK_ENV: development

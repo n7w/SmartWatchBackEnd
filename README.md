@@ -7,6 +7,7 @@
 **methods：** POST  
 **request params：** 
 
+
 Name | Type | Discription
 ---|--- | ---
 sid | String |设备id
@@ -14,20 +15,26 @@ T |  Double | 体温
 hb | Double | 心跳
 bo | Double | 血氧
 
+
 **response：** 200 OK
 
 ## 查询一天数据
-**path：** /<sid>/<days>  
+**path：** /*sid*/*days*  
 **methods：** GET  
 **request params：** 
+
 
 Name | Type | Discription
 ---|--- | ---
 sid | String |设备id
 days| Integer| 查询天数（单位：天）
 
+
+
 **response type：** JSON   
 **response datas：**
+
+
 Name | Type | Discription
 ---|--- | ---
 id | Integer | 数据库id
@@ -37,14 +44,19 @@ hb | Integer | 心跳
 bo | Integer | 血氧
 ctime | String | 上传时间，原为 Timestamp 格式
 
+
 ## 数据分析
-**path：** /analyze/<sid>  
+**path：** /analyze/*sid*  
 **methods：** GET  
 **request params：** 
+
 
 Name | Type | Discription
 ---|--- | ---
 sid | String |设备id
+
+
+
 **response type：** JSON   
 **response datas：**
 ```
